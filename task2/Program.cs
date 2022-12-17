@@ -15,8 +15,13 @@ if (a > b)
     Console.WriteLine("Меньшее число: " + b);
 }
 
-else
+else if (a < b)
 {
     Console.WriteLine("Меньшее число: " + a);
     Console.WriteLine("Большее число: " + b);
+}
+
+else
+{
+    Console.WriteLine("a и b - равные числа");
 }
