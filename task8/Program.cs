@@ -12,5 +12,9 @@ while (i <= a)
 {
     Console.Write(i + " ");
     i = i + 2;
+}
 
+if (a <= 0)
+{
+    Console.WriteLine("Неверный ввод");
 }
