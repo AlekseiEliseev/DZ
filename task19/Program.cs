@@ -4,3 +4,25 @@
 // 14212 -> нет
 // 12821 -> да
 // 23432 -> да
+
+Console.WriteLine("Введите пятизначное число: ");
+string a = Console.ReadLine();
+int aStr = a.Length;
+
+if (a > 9999 && a < 100000)
+{
+    if (a[0] == a[4] && a[1] == a[3])
+    {
+        Console.WriteLine("Да - это палидром");
+    }
+
+    else
+    {
+        Console.WriteLine("Нет - это не палидром");
+    }
+}
+
+else
+{
+    Console.WriteLine("Неверный ввод");
+}
