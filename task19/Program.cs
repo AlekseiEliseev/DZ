@@ -6,12 +6,12 @@
 // 23432 -> да
 
 Console.WriteLine("Введите пятизначное число: ");
-string a = Console.ReadLine();
-int aStr = a.Length;
+string number = Console.ReadLine();
+int len = number.Length;
 
-if (a > 9999 && a < 100000)
+if (len == 5)
 {
-    if (a[0] == a[4] && a[1] == a[3])
+    if (number[0] == number[4] && number[1] == number[3])
     {
         Console.WriteLine("Да - это палидром");
     }
