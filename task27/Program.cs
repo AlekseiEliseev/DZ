@@ -3,18 +3,15 @@
 // 82 -> 10
 // 9012 -> 12
 
-int Sum(int number)
-{
+Console.WriteLine("Введите число");
+int i = Convert.ToInt32(Console.ReadLine());
 int sum = 0;
-for(int i = 1; i <= number; i++)
+
+while (i > 0)
 {
-    sum += number % 10;  // sum = sum + (number %10)
-    number /=10; // number = number / 10
-}
-return sum;
+    int num = i % 10;
+    i = i / 10;
+    sum = sum + num;
 }
 
-Console.WriteLine("Введите число: ");
-int A = Convert.ToInt32(Console.ReadLine());
-int sum = Sum(A);
-Console.WriteLine(sum);
+Console.WriteLine("Сумма всех цифр в числе равна: " + sum);
