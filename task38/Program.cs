@@ -27,7 +27,7 @@ for (int i = 0; i < array.Length; i++)
         {
             max = array[i];
         }
-    else if (array[i] < min)
+    if (array[i] < min)
         {
             min = array[i];
         }
