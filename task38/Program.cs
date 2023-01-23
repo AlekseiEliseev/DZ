@@ -18,8 +18,8 @@ FillArrayWithRandom(array);
 Console.Write("Ваш случайный массив: ");
 Console.WriteLine(string.Join("; ", array));
 
-double min = Int32.MaxValue;
-double max = Int32.MinValue;
+double min = double.MaxValue;
+double max = double.MinValue;
 double diff =  0;
 for (int i = 0; i < array.Length; i++)
 {
