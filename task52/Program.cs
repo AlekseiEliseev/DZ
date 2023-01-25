@@ -20,6 +20,24 @@ void FillArrayWithRandom(int[,] matrix, int m, int n)
     Console.WriteLine();
 }
 
+Console.WriteLine("Введите число m:");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите число n:");
+int n = Convert.ToInt32(Console.ReadLine());
+int[,] matrix = new int[m, n];
+FillArrayWithRandom(matrix, m, n);
+
+double sum = 0;
+Console.Write("Среднее арифметическое каждого столбца: ");
+
+for (int j = 0; j < matrix.GetLength(0); j++)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        sum += matrix[i, j];
+    }
+    Console.Write($"{Math.Round(sum / matrix.GetLength(0)),(1)} ");
+}
 
 
 // void ArithmeticMean(int[,] matrix, int m, int n)
@@ -34,24 +52,3 @@ void FillArrayWithRandom(int[,] matrix, int m, int n)
 //     }
 //     Console.WriteLine($"Среднее арифметическое каждого столбца: {sum / matrix.Length} ;");
 // }
-
-
-Console.WriteLine("Введите число m:");
-int m = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите число n:");
-int n = Convert.ToInt32(Console.ReadLine());
-int[,] matrix = new int[m, n];
-FillArrayWithRandom(matrix, m, n);
-// ArithmeticMean(matrix, m, n);
-
-Console.WriteLine(matrix.GetLength(0));
-for (int j = 0; j < matrix.GetLength(1); j++)
-{
-    double sum = 0;
-    for (int i = 0; i < matrix.GetLength(0); i++)
-    {
-        sum += matrix[i, j];
-    }
-    Console.Write($"{ sum / matrix.GetLength(0)} ");
-}
-Console.ReadLine();

@@ -33,7 +33,7 @@ int rows = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите index colums:");
 int colums = Convert.ToInt32(Console.ReadLine());
 
-if (rows < matrix.Length && colums < matrix.Length)
+if (rows < m && colums < n)
 {
     Console.Write($"{rows}, {colums}, -> {matrix[rows, colums]}");
 }
