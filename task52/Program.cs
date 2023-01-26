@@ -27,28 +27,14 @@ int n = Convert.ToInt32(Console.ReadLine());
 int[,] matrix = new int[m, n];
 FillArrayWithRandom(matrix, m, n);
 
-double sum = 0;
 Console.Write("Среднее арифметическое каждого столбца: ");
 
 for (int j = 0; j < matrix.GetLength(0); j++)
 {
+    double sum = 0;
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         sum += matrix[i, j];
     }
-    Console.Write($"{Math.Round(sum / matrix.GetLength(0)),(1)} ");
+    Console.Write($"{Math.Round(sum / matrix.GetLength(0),1)} ");
 }
-
-
-// void ArithmeticMean(int[,] matrix, int m, int n)
-// {
-//     double sum = 0;
-//     for (int j = 0; j < matrix.Length; j++)
-//     {
-//         for (int i = 0; i < matrix.Length; i++)
-//         {
-//            sum += matrix[i, j];
-//         }
-//     }
-//     Console.WriteLine($"Среднее арифметическое каждого столбца: {sum / matrix.Length} ;");
-// }
